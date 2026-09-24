@@ -324,18 +324,6 @@ footer p{
   margin-bottom: 0.75rem;
 }
 
-.game-rating {
-  color: var(--warning);
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-
-.game-rating::before {
-  content: "⭐";
-}
 
 
 /* =====================
