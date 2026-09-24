@@ -664,3 +664,7 @@ dialog#game-dialog::backdrop {
   transition: opacity 0.2s;
 }
 
+.hero-btn:hover {
+  opacity: 0.9;
+}
+
