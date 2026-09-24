@@ -170,7 +170,7 @@ header {
   backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(172, 198, 201, 0.2);
   color: var(--primary-text);
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   text-align: center;
   position: fixed;
   top: 0;
@@ -178,8 +178,51 @@ header {
   right: 0;
   z-index: 1000;
   transition: var(--transition);
+
+   display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Trebuchet MS", "Arial Unicode MS", sans-serif; 
 }
 
+/* Logo */
+.logo-link {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+
+.logo {
+  width: 80px; 
+  height: auto;
+  display: block;
+}
+
+/* Placer Book bord-knappen helt ude til højre */
+.book-btn {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--third-color);
+  color: #492E2E;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Arial Unicode MS", sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+/* Tydelig fokus når man navigerer med tastatur */
+.logo-link:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 5px;
+  border-radius: 5px;
+}
 header h1 {
   font-size: clamp(1.5rem, 4vw, 2.5rem);
   font-weight: 500;
