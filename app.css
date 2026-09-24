@@ -4,17 +4,17 @@
 
 :root {
   /* Colors */
-  --primary-color: #BF171C;
+  --primary-color: #505C38; 
   --secondary-color: #000000;
-  --third-color: #f6c9c9;
+  --third-color: #FFF6F1;   
 
   /* Text - colors */
   --primary-text: white;
   --secondary-text: black;
 
   /* Backgrounds */
-  --background: #BF171C;
-  --background-card: #f6c9c9;
+  --background: #FFF6F1;
+  --background-card: #FFF6F1;
 
   /* Semantic */
   --warning: #F9DB25;

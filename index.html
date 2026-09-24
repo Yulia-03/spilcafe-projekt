@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spil oversigt</title>
+    <title>Bræt spilcafe</title>
     <link rel="stylesheet" href="app.css" />
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <!--luckiest guy og poppins font-->
@@ -21,57 +21,54 @@
       <a href="#" class="book-btn">Book bord</a>
     </header>
 
-    <main>
-      <!-- Filter bar med alle filtreringsmuligheder -->
-      <section class="filterbar">
-        <!-- Øverste række: Søg og genre -->
-        <div class="filter-row-main">
-          <div class="filter-group search-group">
-            <label for="search-input"> Søg</label>
-            <input type="text" id="search-input" placeholder="Søg efter et spil..." />
-          </div>
-
-          <div class="filter-group">
-            <label for="genre-select"> Kategori</label>
-            <select id="genre-select">
-              <option value="all">Alle kategorier</option>
-              <!-- Kategorier indsættes dynamisk via JavaScript -->
-            </select>
-          </div>
-
-          <div class="filter-group">
-            <label for="sort-select"> Sortering</label>
-            <select id="sort-select">
-              <option value="none">Ingen sortering</option>
-              <option value="title">Titel (A-Å)</option>
-              <option value="rating">Rating (højeste først)</option>
-            </select>
-          </div>
+     <main>
+  <!-- Hero sektion -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2 tabindex="0">Find et spil.<br>Hyg dig.</h2>
+        <p tabindex="0">Slut med scrolling, nu skal der rulles med terninger! kom forbi og få en hyggelig stund med de mennesker, du holder af, over et godt brætspil. alene, som par eller med hele banden er du velkommen. vi har bordet klar.</p>
+        
+        <div class="hero-buttons">
+          <a href="#lokation" class="hero-btn">Find lokation</a>
+          <a href="#book" class="hero-btn">Book bord</a>
         </div>
-
-          <!-- Rating range filter -->
-          <div class="filter-group range-group">
-            <label class="range-label"> Rating</label>
-            <div class="range-inputs">
-              <input type="number" id="rating-from" placeholder="0.0" min="0" max="10" step="0.1" />
-              <span class="range-separator">→</span>
-              <input type="number" id="rating-to" placeholder="10.0" min="0" max="10" step="0.1" />
-            </div>
-          </div>
-
-          <!-- Ryd alle filtre knap -->
-          <button id="clear-filters" class="clear-btn">
-            <span class="btn-icon">🗑️</span>
-            <span class="btn-text">Nulstil filtre</span>
-          </button>
+      </div>
+      
+      <div class="hero-image">
+       <img src="img/dekorativt.billede.png" alt="" tabindex="0"> 
+      </div>
+    </div>
+  </section>
+  <!-- Spiloversigt & Filterbar -->
+   <section class="spiloversigt-section">
+    <h2 tabindex="0" class="spil-oversigt-titel">Spiloversigt</h2>
+    <p tabindex="0" class="spil-oversigt-tekst"> 
+      vores fulde samling af brætspil — søg efter et bestemt spil, eller vælg en kategori som familiespil, eventyr eller strategi.
+    </p>
+    <!-- Filterbar (Søg / Kategori) -->
+    <div class="filterbar" tabindex="0">
+      <div class="filter-row-main">
+        <div class="filter-group search-group">
+          <input type="text" id="search-input" placeholder="Søg efter et spil" tabindex="0" />
         </div>
-      </section>
-
-      <!-- spil grid -->
-      <section id="game-list" class="game-grid">
-        <!-- spil vil blive indsat her dynamisk -->
-      </section>
-    </main>
+        <div class="filter-group">
+          <select id="genre-select" tabindex="0">
+            <option value="all">Vælg kategori</option>
+          </select>
+        </div>
+        <div class="filter-group" style="display: none;">
+          <select id="sort-select"><option value="none">Ingen sortering</option></select>
+          <input type="number" id="rating-from" />
+          <input type="number" id="rating-to" />
+          <button id="clear-filters">Ryd</button>
+        </div>
+      </div>
+    </div>
+    <!-- Hvor spillene bliver indsat dynamisk via JS -->
+    <div id="game-list"></div>
+  </section>
+</main>
 
     <!-- Footer -->
     <footer>
