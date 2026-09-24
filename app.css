@@ -674,3 +674,13 @@ dialog#game-dialog::backdrop {
   outline-offset: 4px !important;
   border-radius: 4px;
 }
+
+/* Spiloversigt overskrift og undertekst */  
+.spil-oversigt-titel {
+  font-family: 'Trebuchet MS', 'Arial Unicode MS', sans-serif;
+  font-size: 2.5rem;
+  color: #492E2E;
+  text-align: center;
+  margin-bottom: 1rem;
+  letter-spacing: 0.12rem;  
+}
