@@ -122,15 +122,13 @@ function showGameModal(game) {
     <div class="dialog-details">
       <p class="game-genre">${game.genre}</p>
       <p class="game-description">${game.description}</p>
-      <p class="game-playtime">${game.playtime}</p>
-      <p class="game-players">${game.players}</p>
-      <p class="game-language">${game.language}</p>
-      <p class="game-age">${game.age}</p>
-      <p class="game-difficulty">${game.difficulty}</p>
-      <p class="game-location">${game.location}</p>
-      <p class="game-shelf">${game.shelf}</p>
-      <p class="game-available">${game.available}</p>
-      <p class="rules">${game.rules}</p>
+      <p class="game-playtime">Spilletid:${game.playtime} min</p> 
+      <p class="game-players">Spillere:${game.players}</p>
+      <p class="game-age">Alder:${game.age}</p> 
+      <p class="game-difficulty">Sværhedsgrad:${game.difficulty}</p>
+      <p class="game-shelf">Hylde:${game.shelf}</p> 
+      <p class="game-available">Ledig:${game.available}</p>
+      <p class="rules">Regler:${game.rules}</p>
     </div>
   `;
 

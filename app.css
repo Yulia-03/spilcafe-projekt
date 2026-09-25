@@ -327,10 +327,10 @@ footer p{
 
 
 /* =====================
-   MOVIE DIALOG
+   SPIL DIALOG
    ===================== */
 dialog#game-dialog {
-  font-family: "poppins";
+  font-family: "Trebuchet MS", "Arial Unicode MS", sans-serif;
   font-size: medium;
   border: none;
   border-radius: var(--radius);
@@ -343,6 +343,12 @@ dialog#game-dialog {
   overflow: hidden;
   position: relative;
   margin: auto;
+}
+
+/* Sørg for at alle elementer inden i dialogen arver eller tvinger typografien */
+dialog#game-dialog * {
+  font-family: "Trebuchet MS", "Arial Unicode MS", sans-serif;
+  letter-spacing: 0.12rem;
 }
 
 /* slørret baggrund når man klikker på et kort */
