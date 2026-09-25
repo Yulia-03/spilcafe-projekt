@@ -127,7 +127,7 @@ main {
 #rating-to {
   background: #ffffff;
   color: #492E2E;  
-  border: 2px solid white !important; 
+  border: 2px solid white; 
   border-radius: calc(var(--radius) * 0.5);
   padding: 0.75rem 1rem;
   font-size: 1rem;
@@ -467,10 +467,10 @@ dialog#game-dialog::backdrop {
 }
 
 #dialog-content .game-description {
-  color: var(--secondary-text) !important; /* Ændret til mørk/sort farve */ 
-  font-size: 1.1rem !important;
-  line-height: 1.7 !important;
-  margin-top: 1rem !important;
+  color: var(--secondary-text); /* Ændret til mørk/sort farve */ 
+  font-size: 1.1rem ;
+  line-height: 1.7;
+  margin-top: 1rem;
   padding: 1rem;
   background: var(--third-color);
   border-radius: var(--radius);
@@ -665,8 +665,8 @@ dialog#game-dialog::backdrop {
 
 /* Gør den hvide fokus-firkant synlig på ALLE elementer, når man trykker Tab */
 :focus-visible {
-  outline: 3px solid white !important;
-  outline-offset: 4px !important;
+  outline: 3px solid white;
+  outline-offset: 4px;
   border-radius: 4px;
 }
 
