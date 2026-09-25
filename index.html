@@ -50,17 +50,17 @@
     <div class="filterbar" tabindex="0">
       <div class="filter-row-main">
         <div class="filter-group search-group">
-          <input type="text" id="search-input" placeholder="Søg efter et spil" tabindex="0" />
+          <input type="text" id="search-input" placeholder="Søg efter et spil" aria-label="Søg efter et spil" tabindex="0" />
         </div>
         <div class="filter-group">
-          <select id="genre-select" tabindex="0">
+          <select id="genre-select" aria-label="Vælg genre" tabindex="0">
             <option value="all">Vælg kategori</option>
           </select>
         </div>
         <div class="filter-group" style="display: none;">
-          <select id="sort-select"><option value="none">Ingen sortering</option></select>
-          <input type="number" id="rating-from" />
-          <input type="number" id="rating-to" />
+          <select id="sort-select" aria-label="Sorter spil"><option value="none">Ingen sortering</option></select>
+          <input type="number" id="rating-from" aria-label="Rating fra" />
+          <input type="number" id="rating-to" aria-label="Rating til" />
           <button id="clear-filters">Ryd</button>
         </div>
       </div>
@@ -78,7 +78,7 @@
     <!-- Game Detail Modal -->
     <dialog id="game-dialog">
       <form method="dialog">
-        <button id="close-dialog" aria-label="Close">✕</button>
+        <button id="close-dialog" aria-label="Luk dialog">✕</button>
         <div id="dialog-content">
           <!-- Game details will be injected here via JavaScript -->
         </div>
