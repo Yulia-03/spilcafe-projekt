@@ -307,8 +307,9 @@ footer p{
 }
 
 .game-info h3 {
+  font-family: "Trebuchet MS", "Arial Unicode MS", sans-serif;
   font-size: clamp(1.125rem, 2vw, 1.375rem);
-  font-weight: 600;
+  font-weight: 600; 
   color: var(--secondary-text);
   display: flex;
   align-items: flex-start;
