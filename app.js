@@ -60,8 +60,9 @@ function displayGame(game) {
   const gameHTML = /*html*/ `
     <article class="game-card" tabindex="0">
       <img src="${game.image}" 
-           alt="Poster of ${game.title}" 
-           class="game-poster" />
+           alt="Plakat af ${game.title}" 
+           class="game-poster"
+           loading="lazy" />
       <div class="game-info">
        <h3>${game.title}</h3> 
         <p class="game-genre">${game.genre}</p>
@@ -126,7 +127,7 @@ function showGameModal(game) {
   // Find modal indhold container og byg HTML struktur dynamisk
   //tilføj indhold fra JSON 
   document.querySelector("#dialog-content").innerHTML = /*html*/ `
-    <img src="${game.image}" alt="Poster af ${game.title}" class="game-poster">
+    <img src="${game.image}" alt="Spilleplakat for ${game.title}" class="game-poster">
     <div class="dialog-details">
       <p class="game-genre">${game.genre}</p>
       <p class="game-description">${game.description}</p>
