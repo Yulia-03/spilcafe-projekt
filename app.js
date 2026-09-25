@@ -33,6 +33,15 @@ async function getGames() {
   populateGenreDropdown(); // Udfyld dropdown med genrer fra data
   displayGames(allGames); // Vis alle games ved start
 }
+function filtercategory() {
+  const valgkategori = document.querySelector("#genre-select").value; 
+if (valgkategori === "all") {
+  displayGames(allGames); 
+  return;
+}
+const resultat = allGames.filter(game => game.genre.includes(valgkategori));
+displayGames(resultat); 
+}
 
 // ===== VISNING AF SPIL =====
 // #3: Display all games - vis en liste af spil på siden
@@ -98,18 +107,26 @@ function populateGenreDropdown() {
   // Samle alle unikke genrer fra alle spil
   // Hvert spil kan have flere genrer (array), så vi løber gennem dem alle
   for (const game of allGames) {
-    for (const genre of game.genre) {
-      genres.add(genre); // Set sikrer kun unikke værdier
+    if (Array.isArray(game.genre)) {
+      for (const g of game.genre) {
+        genres.add(g);
+      }
+    } else if (typeof game.genre === "string") {
+      // Hvis genrer er adskilt af f.eks. kommaer eller blot én streng
+      genres.add(game.genre);
     }
   }
 
-  // Fjern gamle options undtagen 'Alle genrer' (reset dropdown)
-  genreSelect.innerHTML = /*html*/ `<option value="all">Alle genrer</option>`;
+  // Fjern gamle options undtagen 'vælg kategori' (reset dropdown)
+  genreSelect.innerHTML = /*html*/ `<option value="all">vælg kategori</option>`;
 
   // Sortér genres alfabetisk og tilføj dem som options
-  const sortedGenres = [...genres].sort(); // Konvertér Set til Array og sortér genrer
+  const sortedGenres = [...genres].sort();
   for (const genre of sortedGenres) {
-    genreSelect.insertAdjacentHTML("beforeend", /*html*/ `<option value="${genre}">${genre}</option>`);
+    genreSelect.insertAdjacentHTML(
+      "beforeend",
+      /*html*/ `<option value="${genre}">${genre}</option>`,
+    );
   }
 }
 
@@ -123,7 +140,7 @@ function showGameModal(game) {
       <p class="game-genre">${game.genre}</p>
       <p class="game-description">${game.description}</p>
       <p class="game-playtime">Spilletid:${game.playtime} min</p> 
-      <p class="game-players">Spillere:${game.players}</p>
+      <p class="game-players">Spillere:${game.players.min}- ${game.players.max}</p>
       <p class="game-age">Alder:${game.age}</p> 
       <p class="game-difficulty">Sværhedsgrad:${game.difficulty}</p>
       <p class="game-shelf">Hylde:${game.shelf}</p> 
