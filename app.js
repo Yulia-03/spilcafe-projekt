@@ -33,15 +33,6 @@ async function getGames() {
   populateGenreDropdown(); // Udfyld dropdown med genrer fra data
   displayGames(allGames); // Vis alle games ved start
 }
-function filtercategory() {
-  const valgkategori = document.querySelector("#genre-select").value; 
-if (valgkategori === "all") {
-  displayGames(allGames); 
-  return;
-}
-const resultat = allGames.filter(game => game.genre.includes(valgkategori));
-displayGames(resultat); 
-}
 
 // ===== VISNING AF SPIL =====
 // #3: Display all games - vis en liste af spil på siden
