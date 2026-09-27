@@ -242,8 +242,6 @@ footer p{
 }
 
 
-/* (main er allerede defineret ovenfor - dublet fjernet) */
-
 /* =====================
    MOVIE GRID & CARDS
    ===================== */
@@ -597,19 +595,9 @@ dialog#game-dialog::backdrop {
 /* =====================
    DARK MODE ADJUSTMENTS
    ===================== */
-@media (prefers-color-scheme: dark){
-  .game-year {
-    background: var(--primary-color);
-    color: var(--third-color);
-  }
-  #dialog-content .game-year {
-    background: var(--primary-color);
-    color: var(--third-color);
-  }
   #close-dialog {
     background: rgba(23, 23, 23, 0.9);
   }
-}
 .hero-section {
   padding: 6rem 2rem 2rem 2rem;
   max-width: 1000px;
