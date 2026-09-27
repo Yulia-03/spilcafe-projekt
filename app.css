@@ -521,7 +521,7 @@ dialog#game-dialog::backdrop {
 
 .no-results {
   text-align: center;
-  color: var(--primary-text);
+  color: #492E2E;
   font-size: 1.2rem;
   margin: 2rem 0;
   padding: 2rem;
@@ -588,8 +588,9 @@ dialog#game-dialog::backdrop {
 /* Focus styles for keyboard navigation */
 .game-card:focus-visible,
 #close-dialog:focus-visible {
-  outline: 3px solid var(--secondary-color);
-  outline-offset: 2px;
+  outline: 3px solid #000000;
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 /* =====================
