@@ -65,7 +65,7 @@ function displayGame(game, index) {
       <img src="${game.image}" 
            alt="Plakat af ${game.title}" 
            class="game-poster"
-           loading="lazy" />
+           ${loadingAttr}/>
       <div class="game-info">
        <h3>${game.title}</h3> 
         <p class="game-genre">${game.genre}</p>

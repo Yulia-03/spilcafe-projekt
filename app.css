@@ -308,7 +308,7 @@ footer p{
   font-family: "Trebuchet MS", "Arial Unicode MS", sans-serif;
   font-size: clamp(1.125rem, 2vw, 1.375rem);
   font-weight: 600; 
-  color: var(--secondary-text);
+  color: white; 
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -318,7 +318,7 @@ footer p{
 
 
 .game-genre {
-  color: var(--secondary-color);
+  color: white; 
   font-size: 0.9rem;
   margin-bottom: 0.75rem;
 }
@@ -444,7 +444,7 @@ dialog#game-dialog::backdrop {
 }
 
 #dialog-content .game-genre {
-  color: var(--secondary-text);
+  color: white;
   font-weight: 500;
   font-size: 1.1rem;
 }
