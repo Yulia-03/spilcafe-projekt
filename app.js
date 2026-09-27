@@ -57,11 +57,11 @@ function displayGame(game, index) {
   const gameList = document.querySelector("#game-list"); // Find container til spil
 
   // NEW: Hvis det er det første spil (index 0), prioriteres hentning med "high", ellers bruges lazy loading
-  const loadingAttr = index === 0 ? 'fetchpriority="high"' : 'loading="lazy"';
+  const loadingAttr = index === 0 ? 'fetchpriority="high"' : 'loading="lazy" loading="eager"'; 
 
   // Byg HTML struktur dynamisk - template literal med ${} til at indsætte data
   const gameHTML = /*html*/ `
-    <article class="game-card" tabindex="0">
+    <article class="game-card" tabindex="0" role="button" aria-label="Se detaljer om ${game.title}">
       <img src="${game.image}" 
            alt="Plakat af ${game.title}" 
            class="game-poster"
