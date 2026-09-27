@@ -47,14 +47,17 @@ function displayGames(games) {
   }
 
   // Loop gennem alle spil og vis hver enkelt
-  for (const game of games) {
-    displayGame(game); // Kald displayGame for hvert spil
+  for (let i = 0; i < games.length; i++) {
+    displayGame(games[i], i); // Send både spil og index med
   }
 }
 
 // #4: Render a single game card and add event listeners - lav et spil kort
-function displayGame(game) {
+function displayGame(game, index) {
   const gameList = document.querySelector("#game-list"); // Find container til spil
+
+  // NEW: Hvis det er det første spil (index 0), prioriteres hentning med "high", ellers bruges lazy loading
+  const loadingAttr = index === 0 ? 'fetchpriority="high"' : 'loading="lazy"';
 
   // Byg HTML struktur dynamisk - template literal med ${} til at indsætte data
   const gameHTML = /*html*/ `
